@@ -332,6 +332,4 @@ gcloud logging read "resource.type=cloud_run_revision" --limit=20
 - https://console.cloud.google.com/billing → "Budgets & alerts" → set a budget alert
 - Example: $5 monthly budget, 50% email alert
 
----
 
-<p align="center">🎉 <b>Your app is now live on the internet!</b> Share the URL on LinkedIn, your GitHub profile, or your CV.</p>

@@ -332,6 +332,4 @@ gcloud logging read "resource.type=cloud_run_revision" --limit=20
 - https://console.cloud.google.com/billing → "Budgets & alerts" → bütçe alarmı kur
 - Örnek: $5 aylık bütçe, %50'de email alarmı
 
----
 
-<p align="center">🎉 <b>Artık uygulaman dünyaya açık!</b> URL'ini LinkedIn'de, GitHub profilinde, CV'nde paylaşabilirsin.</p>
