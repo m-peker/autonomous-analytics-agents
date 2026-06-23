@@ -1,0 +1,41 @@
+[project]
+name = "autonomous-analytics-agents"
+version = "1.0.0"
+description = "Multi-agent data intelligence platform — upload any spreadsheet, 9 AI agents analyze, visualize, and report autonomously"
+requires-python = ">=3.12"
+readme = "README.md"
+license = {text = "MIT"}
+authors = [
+    {name = "Your Name", email = "you@example.com"},
+]
+keywords = [
+    "ai", "agents", "llm", "multi-agent", "rag",
+    "research", "analytics", "business-intelligence", "data-science",
+    "openai", "anthropic", "automation", "data-science",
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "Topic :: Scientific/Engineering :: Information Analysis",
+]
+
+[project.urls]
+Homepage = "https://github.com/yourusername/autonomous-analytics-agents"
+Repository = "https://github.com/yourusername/autonomous-analytics-agents"
+Issues = "https://github.com/yourusername/autonomous-analytics-agents/issues"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
+
+[tool.ruff]
+line-length = 110
+target-version = "py312"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "N", "W", "UP"]
+ignore = ["E501"]

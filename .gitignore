@@ -1,0 +1,44 @@
+# ── Python ──
+__pycache__/
+*.py[cod]
+*.egg-info/
+dist/
+build/
+.venv/
+venv/
+
+# ── Environment ──
+.env
+
+# ── Data (local) ──
+data/chroma/
+data/uploads/*
+data/outputs/*
+!data/uploads/.gitkeep
+!data/outputs/.gitkeep
+
+# ── IDE ──
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# ── OS ──
+.DS_Store
+Thumbs.db
+
+# ── Testing ──
+htmlcov/
+.coverage
+.pytest_cache/
+
+# ── Terraform ──
+terraform/.terraform/
+terraform/*.tfstate
+terraform/*.tfstate.*
+terraform/terraform.tfvars
+.terraform.lock.hcl
+
+# ── GCP ──
+*.key.json
+gcloud-*.log

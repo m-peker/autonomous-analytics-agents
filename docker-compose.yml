@@ -1,0 +1,46 @@
+# Autonomous Analytics Agents — Docker Compose
+#
+# Quick start:
+#   1. cp .env.example .env  (edit with your API keys)
+#   2. docker compose up -d --build
+#   3. open http://localhost:8501
+#
+# For cloud LLM providers (OpenAI, Anthropic, etc.), just set the keys in .env.
+# Ollama is optional — only needed if you want local models as fallback.
+
+services:
+  # Optional: local Ollama for offline/fallback inference
+  ollama:
+    image: ollama/ollama:latest
+    profiles: ["local"]
+    ports: ["11434:11434"]
+    volumes:
+      - ollama_models:/root/.ollama
+    # GPU acceleration (requires NVIDIA Container Toolkit):
+    # deploy:
+    #   resources:
+    #     reservations:
+    #       devices:
+    #         - driver: nvidia
+    #           count: all
+    #           capabilities: [gpu]
+
+  analytics-agents:
+    build: .
+    container_name: analytics-agents
+    ports: ["8501:8501"]
+    environment:
+      - OPENAI_API_KEY=${OPENAI_API_KEY:-}
+      - ANTHROPIC_API_KEY=${ANTHROPIC_API_KEY:-}
+      - GROQ_API_KEY=${GROQ_API_KEY:-}
+      - TOGETHER_API_KEY=${TOGETHER_API_KEY:-}
+      - GOOGLE_API_KEY=${GOOGLE_API_KEY:-}
+      - FIRECRAWL_API_KEY=${FIRECRAWL_API_KEY:-}
+      - OLLAMA_BASE_URL=${OLLAMA_BASE_URL:-http://ollama:11434}
+      - LLM_PROVIDER=${LLM_PROVIDER:-openai}
+    volumes:
+      - ./data:/app/data
+    restart: unless-stopped
+
+volumes:
+  ollama_models:
