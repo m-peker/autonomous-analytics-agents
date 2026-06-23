@@ -188,7 +188,7 @@ chmod +x scripts/deploy-gcp.sh
 ./scripts/deploy-gcp.sh
 ```
 
-> 📖 **New to GCP?** Step-by-step guide with explanations: **[GUIDE.md](GUIDE.md)** — zero to deployed in 30 minutes.
+> 📖 **New to GCP?** Step-by-step guide with explanations: **[GUIDE.md](GUIDE.md)** (Türkçe) | **[GUIDE_EN.md](GUIDE_EN.md)** (English) — zero to deployed in 30 minutes.
 
 The script handles: API enabling → Artifact Registry → GCS bucket → Secret Manager → Docker build → Cloud Run deploy.
 
