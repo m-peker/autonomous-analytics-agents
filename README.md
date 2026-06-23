@@ -30,6 +30,12 @@ Modern business intelligence is **fragmented**. You jump between Excel for analy
 
 ## 🏗️ Architecture
 
+<p align="center">
+  <img src="images/architecture.png" alt="Autonomous Analytics Agents Architecture" width="800">
+</p>
+
+### Agent Pipeline
+
 ```mermaid
 flowchart TD
     A[📥 Upload Spreadsheet] --> B[🔍 1. Intake Agent<br/>Classify & Route]
